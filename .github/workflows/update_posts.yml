@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          persist-credentials: true
           submodules: true
           fetch-depth: 0 
           ref: 'main'
@@ -35,6 +37,6 @@ jobs:
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT }}
+          ssh: true
           branch: main
       
