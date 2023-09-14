@@ -29,7 +29,7 @@ jobs:
           
           # sync diffs
           cd content/posts
-          diffs=$(comm -3 <(ls ../source) <(ls .))
+          diffs=$(comm -3 <(ls ../../source) <(ls .))
           for post in $diffs; do
             printf "%s\n%s\n%s\n%s\n\n" "+++" \
               "titile = '${post%.md}'" \
@@ -42,8 +42,11 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "update posts source"
+          if $(git diff | grep -q ""); then
+
+            git add .
+            git commit -m "update posts source"
+          fi
           
       - name: push changes
         uses: ad-m/github-push-action@master
