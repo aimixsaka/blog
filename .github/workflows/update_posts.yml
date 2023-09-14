@@ -26,7 +26,17 @@ jobs:
       - name: sync posts source
         run: |
           git submodule update --remote --rebase source
-          cp source/* content/posts/*
+          
+          # sync diffs
+          cd content/posts
+          diffs=$(comm -3 <(ls ../source) <(ls .))
+          for post in $diffs; do
+            printf "%s\n%s\n%s\n%s\n\n" "+++" \
+              "titile = '${post%.md}'" \
+              "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
+              "+++" > "$post"
+            cat "../source/$post" >> "$post"
+          done
 
       - name: commit changes
         run: |
@@ -34,9 +44,11 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "update posts source"
+          
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
+          force: true
           ssh: true
           branch: main
       
