@@ -20,10 +20,6 @@ jobs:
           if ! [[ -d content/posts ]]; then
             mkdir -v -p content/posts
           fi
-
-      - name: install dependencies
-        run: |
-          sudo apt-get update
           
       - name: sync posts source
         run: |
