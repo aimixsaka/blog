@@ -3,7 +3,7 @@ titile = 'nix-pills-2'
 tag = ["nix-pills"]
 series = ["nix-pills"]
 
-date = 2023-10-09T12:20:45+08:00
+date = 2023-10-09T12:49:31+08:00
 +++
 
 
