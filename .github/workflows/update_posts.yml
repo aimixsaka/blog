@@ -53,8 +53,8 @@ jobs:
                 if ! [[ -e ./$dirname-$post ]]; then
                   printf "%s\n%s\n%s\n%s\n\n" "+++" \
                     "titile = '${post%.md}'" \
-                    "tag = $(basename $f)" \
-                    "series = $(basename $f)" \
+                    "tag = '$(basename $f)'" \
+                    "series = '$(basename $f)'" \
                     "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
                     "+++" > ./$dirname-$post
                   cat $f2 >> ./$dirname-$post
@@ -112,7 +112,9 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
