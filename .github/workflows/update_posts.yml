@@ -3,6 +3,8 @@ name: UpdatePosts
 on:
   repository_dispatch:
     types: [update_posts]
+  push:
+    branches: [main]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
