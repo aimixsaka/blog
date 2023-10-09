@@ -3,8 +3,8 @@ name: UpdatePosts
 on:
   repository_dispatch:
     types: [update_posts]
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
 
 # Default to bash
 defaults:
