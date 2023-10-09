@@ -1,8 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tags - Tag - AIMIXSAKA</title>
-        <link>http://blog.aimisaka.site/tags/</link>
-        <description>Tags - Tag - AIMIXSAKA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aimixsaka@gmail.com (aimixsaka)</managingEditor>
-            <webMaster>aimixsaka@gmail.com (aimixsaka)</webMaster><atom:link href="http://blog.aimisaka.site/tags/" rel="self" type="application/rss+xml" /></channel>
-</rss>
