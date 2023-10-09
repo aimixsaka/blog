@@ -26,6 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          persist-credentials: true
           submodules: true
           fetch-depth: 0 
           ref: 'main'
@@ -68,7 +70,7 @@ jobs:
           done
 
           
-      - name: Install Hugo CLI
+      - name: hugo build
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
@@ -92,22 +94,23 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+
+    
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if $(git diff | grep -q ""); then
+
+            git add .
+            git commit -m "update posts source"
+          fi
+
+      - name: push changes
+        uses: ad-m/github-push-action@master
         with:
-          path: ./public
-
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          force: true
+          ssh: true
+          branch: main
 
       
