@@ -69,22 +69,6 @@ jobs:
             fi
           done
 
-      - name: commit changes
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          if $(git diff | grep -q ""); then
-
-            git add .
-            git commit -m "update posts source"
-          fi
-          
-      - name: push changes
-        uses: ad-m/github-push-action@master
-        with:
-          force: true
-          ssh: true
-          branch: main
 
           
       - name: Install Hugo CLI
@@ -115,6 +99,24 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./public
+
+          
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if $(git diff | grep -q ""); then
+
+            git add .
+            git commit -m "update posts source"
+          fi
+          
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          force: true
+          ssh: true
+          branch: main
 
   # Deployment job
   deploy:
