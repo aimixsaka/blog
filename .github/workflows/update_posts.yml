@@ -71,6 +71,24 @@ jobs:
 
 
           
+      - name: commit changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if $(git diff | grep -q ""); then
+
+            git add .
+            git commit -m "update posts source"
+          fi
+          
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          force: true
+          ssh: true
+          branch: main
+
+          
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -100,23 +118,6 @@ jobs:
         with:
           path: ./public
 
-          
-      - name: commit changes
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          if $(git diff | grep -q ""); then
-
-            git add .
-            git commit -m "update posts source"
-          fi
-          
-      - name: push changes
-        uses: ad-m/github-push-action@master
-        with:
-          force: true
-          ssh: true
-          branch: main
 
   # Deployment job
   deploy:
