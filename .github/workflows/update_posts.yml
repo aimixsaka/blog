@@ -51,9 +51,9 @@ jobs:
               for f2 in $f/*; do
                 post=$(basename $f2) 
                 printf "%s\n%s\n%s\n%s\n\n" "+++" \
-                  "titile = '${post%.md}'" \
-                  "tag = [\"$(basename $f\"]" \
-                  "series = [\"$(basename $f\"]" \
+                  "titile = '$dirname-${post%.md}'" \
+                  "tag = [\"$(basename $f)\"]" \
+                  "series = [\"$(basename $f)\"]" \
                   "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
                   "+++" > ./$dirname-$post
                 cat $f2 >> ./$dirname-$post
