@@ -27,15 +27,35 @@ jobs:
         run: |
           git submodule update --remote --rebase source
           
-          # sync diffs
+          # sync from source to content/posts
           cd content/posts
-          diffs=$(comm -3 <(ls ../../source) <(ls .))
-          for post in $diffs; do
-            printf "%s\n%s\n%s\n%s\n\n" "+++" \
-              "titile = '${post%.md}'" \
-              "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
-              "+++" > "$post"
-            cat "../../source/$post" >> "$post"
+          for f in ../../source/*; do
+            # directory, use dir name as tag name
+            if [[ -d $f ]]; then
+              dirname=$(basename $f)
+              for f2 in $f/*; do
+                post=$(basename $f2) 
+                if ! [[ -e ./$dirname-$post ]]; then
+                  printf "%s\n%s\n%s\n%s\n\n" "+++" \
+                    "titile = '${post%.md}'" \
+                    "tag = $(basename $f)" \
+                    "series = $(basename $f)" \
+                    "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
+                    "+++" > ./$dirname-$post
+                  cat $f2 >> ./$dirname-$post
+                fi
+              done
+
+            else
+              post=$(basename $f)
+              if ! [[ -e ./$post ]]; then
+                printf "%s\n%s\n%s\n%s\n\n" "+++" \
+                  "titile = '${post%.md}'" \
+                  "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
+                  "+++" > ./$post
+                cat $f >> ./$post
+              fi
+            fi
           done
 
       - name: commit changes
