@@ -3,11 +3,12 @@ titile = 'nix-pills-note-7'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第7篇
 ## garbage collector
 
 - Nix有着比dpkg，rpm等更细粒度，更精确的垃圾回收

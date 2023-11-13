@@ -3,11 +3,12 @@ titile = 'nix-pills-note-9'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第9篇
 ## callPackage pattern
 
 - 在前面的一节中，我们为了用户灵活度和与仓库文件解耦合，用了`input design`(将包构建写作函数)

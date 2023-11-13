@@ -3,11 +3,12 @@ titile = 'nix-pills-note-13'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第13篇
 ## stdenv
 
 - stdenv 是我们打包中最常用到的工具，`nixpgks`中绝大多数包都是用`stdenv.mkDerivation`打的

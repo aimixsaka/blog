@@ -3,11 +3,12 @@ titile = 'nix-pills-note-5'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第5篇
 ## automatic runtime
 - 分析构建时依赖和运行时依赖
   `build dependency`

@@ -3,6 +3,7 @@
 
 
 
+## 第6篇
 ## developing(debug) with nix-shell
 
 - 当我们运行`nix-shell hellov2.nix`时，与`nix-build`的区别是其只会进入bash环境，并把`derivation` 

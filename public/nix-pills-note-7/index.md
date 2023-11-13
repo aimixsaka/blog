@@ -3,6 +3,7 @@
 
 
 
+## 第7篇
 ## garbage collector
 
 - Nix有着比dpkg，rpm等更细粒度，更精确的垃圾回收

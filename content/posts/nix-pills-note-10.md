@@ -3,11 +3,12 @@ titile = 'nix-pills-note-10'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:09+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第10篇
 ## override pattern
 
 - 前面我们利用函数参数，通过改变调用时传入的参数，来获取一个包的不同变种

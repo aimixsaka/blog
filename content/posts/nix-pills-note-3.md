@@ -3,11 +3,12 @@ titile = 'nix-pills-note-3'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第3篇
 ## working derivation
 - 为了让`derivation`两个阶段成功运行，除了必要的三个元素，还需要`out path`存在
 - 为了构建`out path`，使用bash脚本来进行构建，通过向`derivation`函数传递参数`args = [ ./builder.sh ]`来让`builder(bash)`运行`builder.sh`构建脚本

@@ -3,11 +3,12 @@ titile = 'nix-pills-note-12'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:09+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第12篇
 ## nix store paths
 
 - 来看一下Nix的hash部分如何求值

@@ -3,11 +3,12 @@ titile = 'nix-pills-note-6'
 tag = ["nix-pills-note"]
 series = ["nix-pills-note"]
 
-date = 2023-11-13T11:32:10+08:00
+date = 2023-11-13T12:16:33+08:00
 +++
 
 
 
+## 第6篇
 ## developing(debug) with nix-shell
 
 - 当我们运行`nix-shell hellov2.nix`时，与`nix-build`的区别是其只会进入bash环境，并把`derivation` 

@@ -3,6 +3,7 @@
 
 
 
+## 第12篇
 ## nix store paths
 
 - 来看一下Nix的hash部分如何求值
