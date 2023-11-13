@@ -45,7 +45,7 @@ jobs:
               for f2 in $f/*; do
                 post=$(basename $f2) 
                 post_dir=${post%%.*}
-                [[ ! -d $dirname-$post_dir ]] && mkdir $dirname-$post_dir
+                [[ ! -d $dirname-$post_dir ]] && mkdir -v $dirname-$post_dir
                 printf "%s\n%s\n%s\n%s\n\n" "+++" \
                   "titile = '$dirname-$post_dir'" \
                   "tag = [\"$(basename $f)\"]" \
@@ -58,6 +58,7 @@ jobs:
             else
               post=$(basename $f)
               post_dir=${post%%.*}
+              [[ ! -d $post_dir ]] && mkdir -v $post_dir
               printf "%s\n%s\n%s\n%s\n\n" "+++" \
                 "titile = '$post_dir'" \
                 "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
