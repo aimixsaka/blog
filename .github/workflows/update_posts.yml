@@ -56,7 +56,8 @@ jobs:
               done
 
             else
-              post_dir=${$(basename $f)%%.*}
+              post=$(basename $f)
+              post_dir=${post%%.*}
               printf "%s\n%s\n%s\n%s\n\n" "+++" \
                 "titile = '$post_dir'" \
                 "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
