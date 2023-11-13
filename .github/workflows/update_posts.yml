@@ -84,8 +84,8 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          if $(git diff | grep -q ""); then
-
+          git status
+          if $(git status -s | grep -q ""); then
             git add .
             git commit -m "update posts source"
           fi
