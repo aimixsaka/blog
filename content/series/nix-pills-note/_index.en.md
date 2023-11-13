@@ -1,4 +1,4 @@
 ---
-title: Getting start with DoIt
-introduction: This series of articles helps you build your own blog with DoIt theme from scratch.
+title: nix-pills-note
+introduction: This series of articles about notes on nix-pills
 ---

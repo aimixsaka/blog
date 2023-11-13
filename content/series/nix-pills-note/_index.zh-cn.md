@@ -1,4 +1,4 @@
 ---
-title: 开始使用 DoIt
-introduction: 这一系列文章帮助你从零开始用 DoIt 主题搭建属于你自己的博客.
+title: nix-pills-笔记
+introduction: 读nix-pills的笔记
 ---
