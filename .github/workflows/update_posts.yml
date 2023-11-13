@@ -44,23 +44,24 @@ jobs:
               dirname=$(basename $f)
               for f2 in $f/*; do
                 post=$(basename $f2) 
-                [[ ! -d $dirname-$post ]] && mkdir $dirname-$post
+                post_dir=${post%%.*}
+                [[ ! -d $dirname-$post_dir ]] && mkdir $dirname-$post_dir
                 printf "%s\n%s\n%s\n%s\n\n" "+++" \
-                  "titile = '$dirname-${post%.md}'" \
+                  "titile = '$dirname-$post_dir'" \
                   "tag = [\"$(basename $f)\"]" \
                   "series = [\"$(basename $f)\"]" \
                   "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
-                  "+++" > ./$dirname-$post/index.zh-cn.md
-                cat $f2 >> ./$dirname-$post/index.zh-cn.md
+                  "+++" > ./$dirname-$post_dir/index.zh-cn.md
+                cat $f2 >> ./$dirname-$post_dir/index.zh-cn.md
               done
 
             else
-              post=$(basename $f)
+              post_dir=${$(basename $f)%%.*}
               printf "%s\n%s\n%s\n%s\n\n" "+++" \
-                "titile = '${post%.md}'" \
+                "titile = '$post_dir'" \
                 "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
-                "+++" > ./$post
-              cat $f >> ./$post
+                "+++" > ./$post_dir/index.zh-cn.md
+              cat $f >> ./$post_dir/index.zh-cn.md
             fi
           done
 
