@@ -3,7 +3,7 @@
 description = "AIMIXSAKA"
 # site keywords
 # 网站关键词
-keywords = ["blog", "computer science"]
+keywords = ["Blog", "Computer Science"]
 # App icon config
 # 应用图标配置
 [app]
@@ -25,7 +25,7 @@ keywords = ["blog", "computer science"]
 # Search config
 # 搜索配置
 [search]
-  enable = false
+  enable = true
   # type of search engine ("algolia", "fuse")
   # 搜索引擎的类型 ("algolia", "fuse")
   type = "algolia"
@@ -80,7 +80,7 @@ keywords = ["blog", "computer science"]
     # avatarURL = "/images/avatar.webp"
     # URL the avatar links to
     # 头像的链接指向的 URL
-    avatarLinkURL = ""
+    avatarLinkURL = "https://blog.aimisaka.site"
     # title shown in home page (HTML format is supported)
     # 主页显示的网站标题 (支持 HTML 格式)
     title = "AIMIXSAKA"
@@ -124,7 +124,7 @@ keywords = ["blog", "computer science"]
   # Foursquare = ""
   # FreeCodeCamp = ""
   # Gitea = ""
-  # GitHub = "xxxx"
+  GitHub = "aimixsaka"
   # Gitlab = ""
   # Goodreads = ""
   # Googlescholar = ""
@@ -180,10 +180,3 @@ keywords = ["blog", "computer science"]
   # [social.Diaspora]
   #   id = "@xxxx"
   #   prefix = "https://yyyy/"
-# Sponsor config
-# 赞助设置
-# [sponsor]
-#   enable = false
-#   bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
-#   link = "https://github.com/sponsors/HEIGE-PCloud"
-  # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"

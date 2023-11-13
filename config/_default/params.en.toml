@@ -1,9 +1,9 @@
 # site description
 # 网站描述
-description = "AIMIXSAKA"
+description = "ANIMA"
 # site keywords
 # 网站关键词
-keywords = ["blog", "computer science"]
+keywords = ["Blog", "Computer Science"]
 # App icon config
 # 应用图标配置
 [app]
@@ -24,33 +24,33 @@ keywords = ["blog", "computer science"]
   tileColor = "#da532c"
 # Search config
 # 搜索配置
-# [search]
-#   enable = true
-#   # type of search engine ("algolia", "fuse")
-#   # 搜索引擎的类型 ("algolia", "fuse")
-#   type = "algolia"
-#   # max index length of the chunked content
-#   # 文章内容最长索引长度
-#   contentLength = 4000
-#   # placeholder of the search bar
-#   # 搜索框的占位提示语
-#   placeholder = ""
-#   # max number of results length
-#   # 最大结果数目
-#   maxResultLength = 10
-#   # snippet length of the result
-#   # 结果内容片段长度
-#   snippetLength = 300
-#   # HTML tag name of the highlight part in results
-#   # 搜索结果中高亮部分的 HTML 标签
-#   highlightTag = "em"
-#   # whether to use the absolute URL based on the baseURL in search index
-#   # 是否在搜索索引中使用基于 baseURL 的绝对路径
-#   absoluteURL = false
-#   [search.algolia]
-#     index = "en_index"
-#     appID = "5YGRNRQK1G"
-#     searchKey = "0ff6874805de24b84aa1d5ebccad56cd"
+[search]
+  enable = true
+  # type of search engine ("algolia", "fuse")
+  # 搜索引擎的类型 ("algolia", "fuse")
+  type = "algolia"
+  # max index length of the chunked content
+  # 文章内容最长索引长度
+  contentLength = 4000
+  # placeholder of the search bar
+  # 搜索框的占位提示语
+  placeholder = ""
+  # max number of results length
+  # 最大结果数目
+  maxResultLength = 10
+  # snippet length of the result
+  # 结果内容片段长度
+  snippetLength = 300
+  # HTML tag name of the highlight part in results
+  # 搜索结果中高亮部分的 HTML 标签
+  highlightTag = "em"
+  # whether to use the absolute URL based on the baseURL in search index
+  # 是否在搜索索引中使用基于 baseURL 的绝对路径
+  absoluteURL = false
+  [search.algolia]
+    index = "en_index"
+    appID = "5YGRNRQK1G"
+    searchKey = "0ff6874805de24b84aa1d5ebccad56cd"
   [search.fuse]
     # https://fusejs.io/api/options.html
     isCaseSensitive = false
@@ -80,7 +80,7 @@ keywords = ["blog", "computer science"]
     # avatarURL = "/images/avatar.webp"
     # URL the avatar links to
     # 头像的链接指向的 URL
-    avatarLinkURL = ""
+    avatarLinkURL = "https://blog.aimisaka.site"
     # title shown in home page (HTML format is supported)
     # 主页显示的网站标题 (支持 HTML 格式)
     title = "AIMIXSAKA"
@@ -124,7 +124,7 @@ keywords = ["blog", "computer science"]
   # Foursquare = ""
   # FreeCodeCamp = ""
   # Gitea = ""
-  # GitHub = "xxxx"
+  GitHub = "aimixsaka"
   # Gitlab = ""
   # Goodreads = ""
   # Googlescholar = ""
@@ -176,16 +176,9 @@ keywords = ["blog", "computer science"]
   # Youtubecustom = ""
   # Youtubelegacy = "xxxx"
   # Zhihu = ""
-  [social.Mastodon]
-    id = "@xxxx"
-    prefix = "https://mastodon.technology/"
-  [social.Diaspora]
-    id = "@xxxx"
-    prefix = "https://yyyy/"
-# Sponsor config
-# 赞助设置
-# [sponsor]
-#   enable = true
-#   bio = "If you find this post helpful, please consider sponsoring."
-#   link = "https://github.com/sponsors/HEIGE-PCloud"
-  # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
+  # [social.Mastodon]
+  #   id = "@xxxx"
+  #   prefix = "https://mastodon.technology/"
+  # [social.Diaspora]
+  #   id = "@xxxx"
+  #   prefix = "https://yyyy/"

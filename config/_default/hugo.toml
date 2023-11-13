@@ -25,6 +25,7 @@ enableEmoji = true
 theme = "DoIt"
 # themes directory
 # 主题目录
+# themesDir = "../.."
 
 # Or, when using theme as hugo module
 # [module]

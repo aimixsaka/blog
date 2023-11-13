@@ -23,14 +23,14 @@
   url = "/tags/"
   title = ""
   weight = 2
-# [[main]]
-#   identifier = "categories"
-#   pre = ""
-#   post = ""
-#   name = "分类"
-#   url = "/categories/"
-#   title = ""
-#   weight = 3
+[[main]]
+  identifier = "categories"
+  pre = ""
+  post = ""
+  name = "分类"
+  url = "/categories/"
+  title = ""
+  weight = 3
 [[main]]
   identifier = "series"
   pre = ""
@@ -48,6 +48,21 @@
   title = ""
   weight = 5
 [[main]]
+  identifier = "showcase"
+  pre = ""
+  post = ""
+  name = "作品"
+  url = "/showcase/"
+  title = ""
+  weight = 6
+[[main]]
+  identifier = "documentation"
+  pre = ""
+  name = "文档"
+  url = "/categories/documentation/"
+  title = ""
+  weight = 7
+[[main]]
   identifier = "about"
   pre = ""
   post = ""
@@ -60,6 +75,6 @@
   pre = "<i class='fab fa-github fa-fw'></i>"
   post = ""
   name = ""
-  url = "https://github.com/aimixsaka"
+  url = "https://github.com/aimixsaka/blog"
   title = "GitHub"
   weight = 9
