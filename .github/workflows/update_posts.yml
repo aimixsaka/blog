@@ -46,12 +46,12 @@ jobs:
                 post=$(basename $f2) 
                 post_dir=${post%%.*}
                 [[ ! -d $dirname-$post_dir ]] && mkdir -v $dirname-$post_dir
-                printf "%s\n%s\n%s\n%s\n\n" "+++" \
-                  "titile = '$dirname-$post_dir'" \
-                  "tag = [\"$(basename $f)\"]" \
-                  "series = [\"$(basename $f)\"]" \
-                  "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
-                  "+++" > ./$dirname-$post_dir/index.zh-cn.md
+                printf "%s\n%s\n%s\n%s\n\n" "---" \
+                  "title: '$dirname-$post_dir'" \
+                  "tag: [\"$(basename $f)\"]" \
+                  "series: [\"$(basename $f)\"]" \
+                  "date: $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
+                  "---" > ./$dirname-$post_dir/index.zh-cn.md
                 cat $f2 >> ./$dirname-$post_dir/index.zh-cn.md
               done
 
@@ -59,10 +59,10 @@ jobs:
               post=$(basename $f)
               post_dir=${post%%.*}
               [[ ! -d $post_dir ]] && mkdir -v $post_dir
-              printf "%s\n%s\n%s\n%s\n\n" "+++" \
-                "titile = '$post_dir'" \
-                "date = $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
-                "+++" > ./$post_dir/index.zh-cn.md
+              printf "%s\n%s\n%s\n%s\n\n" "---" \
+                "title: '$post_dir'" \
+                "date: $(date +'%Y-%m-%dT%H:%M:%S+08:00')" \
+                "---" > ./$post_dir/index.zh-cn.md
               cat $f >> ./$post_dir/index.zh-cn.md
             fi
           done
