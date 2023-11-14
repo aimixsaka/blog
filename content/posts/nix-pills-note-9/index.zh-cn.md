@@ -1,10 +1,10 @@
-+++
-titile = 'nix-pills-note-9'
-tag = ["nix-pills-note"]
-series = ["nix-pills-note"]
+---
+title: 'nix-pills-note-9'
+tag: ["nix-pills-note"]
+series: ["nix-pills-note"]
 
-date = 2023-11-14T12:51:42+08:00
-+++
+date: 2023-11-14T13:04:12+08:00
+---
 
 
 
